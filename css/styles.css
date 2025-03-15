@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    margin: 40px 0 30px;
+}
+
+h1 {
+    font-size: 175%;
+    color: #2c3e50;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.container {
+    width: 100%;
+    padding: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-container {
+    position: relative;
+    border: 1px solid black;
+    margin-bottom: 25px;
+    padding: 50px 20px 20px 20px;
+    border-radius: 3px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+
+.section-container:nth-child(1) {
+    background-color: #FFF5F5;
+}
+
+.section-container:nth-child(2) {
+    background-color: #EBF8FF;
+}
+
+.section-container:nth-child(3) {
+    background-color: #F0FFF4;
+}
+
+.section-title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 8px 30px;
+    font-size: 125%;
+    font-weight: bold;
+    border: 1px solid black;
+}
+
+
+.section-container:nth-child(1) .section-title {
+    background-color: #FF7675;
+    color: #fff;
+}
+
+.section-container:nth-child(2) .section-title {
+    background-color: #74B9FF;
+    color: #fff;
+}
+
+.section-container:nth-child(3) .section-title {
+    background-color: #55EFC4;
+    color: #2d3436;
+}
+
+p {
+    margin-top: 10px;
+    color: #333;
+    line-height: 1.7;
+}
+
+
+@media (min-width: 992px) {
+    .section-container {
+        float: left;
+        width: calc(33.33% - 20px);
+        margin: 0 10px 30px;
+        min-height: 300px;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .section-container {
+        float: left;
+        width: calc(50% - 20px);
+        margin: 0 10px 30px;
+        min-height: 280px;
+    }
+    
+    .section-container:nth-child(3) {
+        clear: both;
+        width: calc(100% - 20px);
+    }
+}
+
+@media (max-width: 767px) {
+    .section-container {
+        float: left;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    header {
+        margin: 25px 0 20px;
+    }
+}
+
+
+.container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
